@@ -9,7 +9,7 @@
   "author": "Austin Peterson <austin@akpwebdesign.com>",
   "license": "MIT",
   "dependencies": {
-    "akp48-plugin-basic-commands": "^1.0.0",
+    "akp48-plugin-basic-commands": "^1.0.1",
     "chance": "^1.0.1",
     "numeral": "^1.5.3"
   }
