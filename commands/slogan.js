@@ -6,14 +6,14 @@ function Slogan() {
 }
 
 Slogan.prototype.respond = function (ctx) {
-  if(!context.text) {return;}
+  if(!ctx.text) {return;}
 
   // Special case for a friend. <3
-  if(context.text.toLowerCase() == "cazif") {
-    return "<cazif> likes men.".replace(/<cazif>/g, context.text);
+  if(ctx.text.toLowerCase() == "cazif") {
+    return "<cazif> likes men.".replace(/<cazif>/g, ctx.text);
   }
 
-  return chance.pickOne(this.slogans).replace(/<text>/g, context.text);
+  return chance.pickOne(this.slogans).replace(/<text>/g, ctx.text);
 };
 
 module.exports = Slogan;
