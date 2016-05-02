@@ -6,7 +6,7 @@ function LART() {
 }
 
 LART.prototype.respond = function (ctx) {
-  return chance.pickOne(this.larts).replace(/\{user\}/g, ctx.text || ctx.nick);
+  return chance.pickone(this.larts).replace(/\{user\}/g, ctx.text || ctx.nick);
 };
 
 module.exports = LART;

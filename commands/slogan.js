@@ -13,7 +13,7 @@ Slogan.prototype.respond = function (ctx) {
     return "<cazif> likes men.".replace(/<cazif>/g, ctx.text);
   }
 
-  return chance.pickOne(this.slogans).replace(/<text>/g, ctx.text);
+  return chance.pickone(this.slogans).replace(/<text>/g, ctx.text);
 };
 
 module.exports = Slogan;
