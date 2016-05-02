@@ -9,6 +9,11 @@
       "usageText": "<items...>",
       "perms": []
     },
+    "LART": {
+      "helpText": "Luser Attitude Readjustment Tool",
+      "usageText": "<user>",
+      "perms": []
+    },
     "roll": {
       "helpText": "Rolls dice. See https://wiki.roll20.net/Dice_Reference for format help.",
       "usageText": "<rolls...>",
@@ -18,6 +23,6 @@
       "helpText": "Generates a slogan for a noun.",
       "usageText": "<noun...>",
       "perms": []
-    },
+    }
   }
 }
