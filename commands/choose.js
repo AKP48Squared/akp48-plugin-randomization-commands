@@ -9,7 +9,7 @@ Choose.prototype.respond = function (context) {
 
   if(!things.length) { return; }
 
-  if(!things.length === 1) { return 'The choice is yours!'; }
+  if(things.length !== 1) { return 'The choice is yours!'; }
 
   return chance.pickone(things);
 };
