@@ -2,6 +2,14 @@ var chance = new (require('chance'))();
 
 function Feel() {
   this.names = ['feel'];
+  this.feels = [
+    'ashamed',
+    'very ashamed',
+    'proud',
+    'very proud',
+    'insane',
+    'daft'
+  ];
 }
 
 Feel.prototype.respond = function (context) {
