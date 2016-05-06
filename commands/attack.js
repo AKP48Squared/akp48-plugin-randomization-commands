@@ -28,12 +28,12 @@ function Attack() {
 
 Attack.prototype.respond = function (context) {
   context.noPrefix = true;
-  
-  var things = context.text.split(' ');
 
-  if(!things.length) { return; }
+  var things = context.text.trim().split(' ');
 
-  var out = `$(context.nick) attacks ${things.join(', ')}:`;
+  if(!things.length || !context.text.trim()) { return; }
+
+  var out = `${context.nick} attacks ${things.join(', ')}:`;
 
   for (let t of things) {
     out += ` ${t} => ${chance.pickone(this.attacks)},`;
