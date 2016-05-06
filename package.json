@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/AKP48Squared/akp48-plugin-randomization-commands",
   "dependencies": {
-    "akp48-plugin-basic-commands": "^1.0.1",
+    "akp48-plugin-basic-commands": "^1.0.3",
     "chance": "^1.0.1",
     "numeral": "^1.5.3"
   }
