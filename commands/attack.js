@@ -27,6 +27,8 @@ function Attack() {
 }
 
 Attack.prototype.respond = function (context) {
+  context.noPrefix = true;
+  
   var things = context.text.split(' ');
 
   if(!things.length) { return; }

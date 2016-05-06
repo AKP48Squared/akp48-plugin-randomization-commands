@@ -13,6 +13,7 @@ function Feel() {
 }
 
 Feel.prototype.respond = function (context) {
+  context.noPrefix = true;
   var person = (context.text.length ? context.text : context.nick);
   return `${context.nick} thinks ${person} should feel ${chance.pickone(this.feels)}.`;
 };
