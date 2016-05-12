@@ -1,6 +1,6 @@
 {
   "name": "akp48-plugin-randomization-commands",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Randomization Commands plugin for AKP48. Adds commands that have to do with chance to the bot.",
   "main": "main.js",
   "scripts": {
