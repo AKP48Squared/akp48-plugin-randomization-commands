@@ -18,12 +18,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AKP48Squared/akp48-plugin-randomization-commands.git"
+    "url": "git+https://github.com/AKP48Squared/randomization-commands.git"
   },
   "bugs": {
-    "url": "https://github.com/AKP48Squared/akp48-plugin-randomization-commands/issues"
+    "url": "https://github.com/AKP48Squared/randomization-commands/issues"
   },
-  "homepage": "https://github.com/AKP48Squared/akp48-plugin-randomization-commands",
+  "homepage": "https://github.com/AKP48Squared/randomization-commands",
   "dependencies": {
     "akp48-plugin-basic-commands": "^1.0.3",
     "chance": "^1.0.1",

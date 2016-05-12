@@ -24,4 +24,4 @@ Example: `slogan Grease Lightning`
 
 # Issues
 
-If you come across any issues, you can report them on this GitHub repo [here](https://github.com/AKP48Squared/akp48-plugin-randomization-commands/issues).
+If you come across any issues, you can report them on this GitHub repo [here](https://github.com/AKP48Squared/randomization-commands/issues).
