@@ -27,3 +27,4 @@ class RandomizationCommands extends BasicCommands {
 
 module.exports = RandomizationCommands;
 module.exports.type = 'MessageHandler';
+module.exports.pluginName = 'randomization-commands';
