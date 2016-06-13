@@ -9,7 +9,7 @@ Roll.prototype.respond = function (context) {
   var diceRegEx = /^^(?:roll(?= *[^+ ]))(?: *(?: |\+) *(?:\d*[1-9]\d*|(?=d))(?:d\d*[1-9]\d*(?:x\d*[1-9]\d*)?)?)+ *$/gi;
   var diceRollRegEx = /[ +](\d+|(?=d))(?:d(\d+)(?:x(\d+))?)?(?= *(\+| |$))/gi;
   //TODO: figure out how to remove 'roll' from the regex.
-  var msg = `roll ${context.text}`;
+  var msg = `roll ${context.rawArgs().join(' ')}`;
   var result, di;
   var dice = [];
 

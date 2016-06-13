@@ -6,14 +6,16 @@ function Slogan() {
 }
 
 Slogan.prototype.respond = function (ctx) {
-  if(!ctx.text) {return;}
+  if(!ctx.rawArgs()) {return;}
+
+  var t = ctx.rawArgs().join(' ');
 
   // Special case for a friend. <3
-  if(ctx.text.toLowerCase() == "cazif") {
-    return "<cazif> likes men.".replace(/<cazif>/g, ctx.text);
+  if(t.toLowerCase() === 'cazif') {
+    return '<cazif> likes men.'.replace(/<cazif>/g, t);
   }
 
-  return chance.pickone(this.slogans).replace(/<text>/g, ctx.text);
+  return chance.pickone(this.slogans).replace(/<text>/g, t);
 };
 
 module.exports = Slogan;

@@ -6,8 +6,8 @@ function LART() {
 }
 
 LART.prototype.respond = function (ctx) {
-  ctx.noPrefix = true;
-  return chance.pickone(this.larts).replace(/\{user\}/g, ctx.text || ctx.nick);
+  ctx.setCustomData('noPrefix', true);
+  return chance.pickone(this.larts).replace(/\{user\}/g, ctx.text() || ctx.nick());
 };
 
 module.exports = LART;

@@ -5,7 +5,7 @@ function Choose() {
 }
 
 Choose.prototype.respond = function (context) {
-  var things = context.text.split(' ');
+  var things = context.rawArgs();
 
   if(!things.length) { return; }
 
