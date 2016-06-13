@@ -1,30 +1,28 @@
 'use strict';
-const BasicCommands = require('akp48-plugin-basic-commands');
+const LogicEngine = require('akp48-plugin-basic-commands').LogicEngine;
 
-class RandomizationCommands extends BasicCommands {
+class RandomizationCommands extends global.AKP48.pluginTypes.MessageHandler {
   constructor(AKP48) {
-    super(AKP48);
+    super(AKP48, 'RandomizationCommands');
+    this._data = {};
+    this.logicEngine = null;
+  }
+
+  load() {
     this._data = require('./plugin.json');
-    //manually override pluginName, since we're extending another plugin.
-    this._pluginName = 'RandomizationCommands';
     var self = this;
-    this.commands = {};
     require('./commands').then(function(res){
-      self.commands = res;
+      self.logicEngine = new LogicEngine(res, self._data, self.name);
     }, function(err){
       console.error(err);
     });
   }
 
-  handleCommand(message, context, res) {
-    global.logger.silly(`${this._pluginName}: Received command.`);
+  handleCommand(context) {
+    global.logger.silly(`${this.name}: Received command.`);
 
-    //run the handleCommand logic from BasicCommands, which should use our defined commands instead.
-    global.logger.silly(`${this._pluginName}: Attempting to handle command using BasicCommands logic.`);
-    super.handleCommand(message, context, res);
+    this.logicEngine(context);
   }
 }
 
 module.exports = RandomizationCommands;
-module.exports.type = 'MessageHandler';
-module.exports.pluginName = 'randomization-commands';
